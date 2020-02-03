@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  z-index: 9999;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background .5s ease;
+  transition: background .5s ease;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #1d1d1d;
+  margin: 0;
+  position: absolute;
+  left: 140px;
+  top: 20px;
+  cursor: pointer;
+}
+
+header .links {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+header .links a {
+  text-decoration: none;
+  color: #333333;
+  padding: 0 20px;
+  -webkit-transition: padding .5s ease;
+  transition: padding .5s ease;
+}
+
+header .links a:hover {
+  color: #5b56a0;
+  padding: 0 40px;
+}
+
+header .links #active {
+  font-weight: 700;
+}
+
+div.block#block1 .background {
+  width: 100vw;
+  height: 50rem;
+  overflow-y: hidden;
+  background-color: #f0f0f0;
+}
+
+div.block#block1 .background .rotate {
+  -webkit-transform: rotate(315deg) translateX(1000px);
+          transform: rotate(315deg) translateX(1000px);
+  background: -webkit-gradient(linear, left top, right top, from(#e6e4ee), color-stop(50%, white), to(#e5e4eb));
+  background: linear-gradient(90deg, #e6e4ee 0%, white 50%, #e5e4eb 100%);
+  width: 30rem;
+  height: 100rem;
+  position: absolute;
+  top: 20rem;
+  left: -20rem;
+}
+
+div.block#block1 .background .rotate2 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: -webkit-gradient(linear, left top, right top, from(#e6e4ee), color-stop(50%, white), to(#e5e4eb));
+  background: linear-gradient(90deg, #e6e4ee 0%, white 50%, #e5e4eb 100%);
+  width: 30rem;
+  height: 60rem;
+  position: absolute;
+  top: 20rem;
+  right: -20rem;
+}
+
+div.block#block2 .background {
+  background: white;
+  width: 100vw;
+  position: absolute;
+  top: 50rem;
+  height: 600px;
+}
+
+div.scroll-tester {
+  height: 200vh;
+}
+/*# sourceMappingURL=styling.css.map */
