@@ -9,6 +9,7 @@ header {
   height: 80px;
   width: 100vw;
   position: fixed;
+  padding: 0;
   z-index: 9999;
   display: -ms-grid;
   display: grid;
@@ -22,12 +23,20 @@ header {
 header h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  text-align: center;
   color: #1d1d1d;
   margin: 0;
   position: absolute;
   left: 140px;
-  top: 20px;
+  top: 15px;
   cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+header h1:hover {
+  letter-spacing: 5px;
+  left: 125px;
 }
 
 header .links {
@@ -91,7 +100,41 @@ div.block#block2 .background {
   height: 600px;
 }
 
-div.scroll-tester {
-  height: 200vh;
+@media only screen and (max-width: 1090px) {
+  header {
+    padding-right: 140px;
+  }
+  header .links {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  header {
+    height: 120px;
+    display: block;
+    padding: 0;
+    padding-top: 15px;
+    text-align: center;
+  }
+  header h1 {
+    position: relative;
+    margin-bottom: 10px;
+    left: 0;
+    top: 0;
+  }
+  header h1:hover {
+    letter-spacing: 5px;
+    left: 2px;
+  }
+  header .links {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .links a {
+    padding: 0px 10px !important;
+  }
 }
 /*# sourceMappingURL=styling.css.map */

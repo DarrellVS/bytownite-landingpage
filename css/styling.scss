@@ -9,7 +9,7 @@ header {
     height: 80px;
     width: 100vw;
     position: fixed;
-
+    padding: 0;
     z-index: 9999;
 
     display: grid;
@@ -20,14 +20,21 @@ header {
     h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
+        text-align: center;
         color: rgb(29, 29, 29);
         margin: 0;
 
         position: absolute;
         left: 140px;
-        top: 20px;
+        top: 15px;
 
         cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            letter-spacing: 5px;
+            left: 125px;
+        }
     }
 
     .links {
@@ -94,6 +101,46 @@ div.block#block2 {
     }
 }
 
-div.scroll-tester {
-    height: 200vh;
+@media only screen and (max-width: 1090px) {
+    header {
+        padding-right: 140px;
+
+        .links {
+            text-align: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header {
+        height: 120px;
+        display: block;
+        padding: 0;
+
+        padding-top: 15px;
+
+        text-align: center;
+
+        h1 {
+            position: relative;
+            margin-bottom: 10px;
+            left: 0;
+            top: 0;
+
+            &:hover {
+                letter-spacing: 5px;
+                left: 2px;
+            }
+        }
+
+        .links {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .links a {
+        padding: 0px 10px !important;
+    }
 }
