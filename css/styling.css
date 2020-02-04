@@ -94,6 +94,7 @@ button.goto-page {
   font-weight: 100;
   text-transform: uppercase;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 400;
   letter-spacing: 2px;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -349,6 +350,7 @@ div.block#block3 {
 div.block#block3 .content {
   text-align: center;
   padding-top: 5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 div.block#block3 .content #head-title {
@@ -368,12 +370,41 @@ div.block#block3 .content .socials {
   margin-top: 100px;
 }
 
-div.block#block3 .content .socials #item {
-  height: 18rem;
+div.block#block3 .content .socials [id^="socialsItem"] {
+  height: 15rem;
   border-right: solid 1px #e2e2e2;
+  padding-top: 60px;
 }
 
-div.block#block3 .content .socials #item:last-of-type {
+div.block#block3 .content .socials [id^="socialsItem"] #title i {
+  text-align: left;
+  float: left;
+  padding-left: 70px;
+  font-size: 70px;
+  color: #b46fcf;
+  background: linear-gradient(50deg, #5c6fb4 0%, #9357be 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.block#block3 .content .socials [id^="socialsItem"] #title h3 {
+  display: inline;
+  position: relative;
+  top: 15px;
+  color: #b46fcf;
+  background: linear-gradient(50deg, #344ca3 0%, #843db6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.block#block3 .content .socials [id^="socialsItem"] a#link {
+  float: left;
+  padding-left: 70px;
+  color: #5a5a5a;
+  font-weight: 600;
+}
+
+div.block#block3 .content .socials [id^="socialsItem"]:last-of-type {
   border-right: none;
 }
 
