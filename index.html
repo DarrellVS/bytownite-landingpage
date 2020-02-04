@@ -264,13 +264,18 @@
                 document.getElementById("top-right-button").style.opacity = (scrollTop / 300).toString();
             }
 
-            if (scrollTop > 735) {
-                document.getElementById("socialsItem1").style.opacity = 1;
-                document.getElementById("socialsItem1").style.top = 0;
-
-                document.getElementById("socialsItem3").style.opacity = 1;
-                document.getElementById("socialsItem3").style.bottom = 0;
+            if (scrollTop > 735 && scrollTop < 1608 && window.innerWidth > 616) {
+                document.getElementById("socialsItem1").style.transform = "translatex(0px)";
+                document.getElementById("socialsItem3").style.transform = "translatex(0px)";
+            } else if ( scrollTop > 3000 && scrollTop < 3900 && window.innerWidth < 616 ) {
+                document.getElementById("socialsItem1").style.transform = "translatex(0px)";
+                document.getElementById("socialsItem3").style.transform = "translatex(0px)";
+            } else {
+                document.getElementById("socialsItem1").style.transform = "";
+                document.getElementById("socialsItem3").style.transform = "";
             }
+
+            console.log(scrollTop);
 
         }
     </script>

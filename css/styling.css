@@ -341,7 +341,7 @@ div.block#block2 .container div.col-md-12.underlay .col-md-4 .inner #description
 }
 
 div.block#block3 {
-  height: 55rem;
+  height: 550rem;
   -webkit-box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
   font-family: 'Montserrat', sans-serif;
@@ -370,13 +370,13 @@ div.block#block3 .content .socials {
   margin-top: 100px;
 }
 
-div.block#block3 .content .socials [id^="socialsItem"] {
+div.block#block3 .content .socials div[id^="socialsItem"] {
   height: 15rem;
   border-right: solid 1px #e2e2e2;
   padding-top: 60px;
 }
 
-div.block#block3 .content .socials [id^="socialsItem"] #title i {
+div.block#block3 .content .socials div[id^="socialsItem"] #title i {
   text-align: left;
   float: left;
   padding-left: 70px;
@@ -387,7 +387,7 @@ div.block#block3 .content .socials [id^="socialsItem"] #title i {
   -webkit-text-fill-color: transparent;
 }
 
-div.block#block3 .content .socials [id^="socialsItem"] #title h3 {
+div.block#block3 .content .socials div[id^="socialsItem"] #title h3 {
   display: inline;
   position: relative;
   top: 15px;
@@ -397,15 +397,33 @@ div.block#block3 .content .socials [id^="socialsItem"] #title h3 {
   -webkit-text-fill-color: transparent;
 }
 
-div.block#block3 .content .socials [id^="socialsItem"] a#link {
+div.block#block3 .content .socials div[id^="socialsItem"] a#link {
   float: left;
   padding-left: 70px;
   color: #5a5a5a;
   font-weight: 600;
 }
 
-div.block#block3 .content .socials [id^="socialsItem"]:last-of-type {
+div.block#block3 .content .socials div[id^="socialsItem"]:last-of-type {
   border-right: none;
+}
+
+div.block#block3 .content .socials #socialsItem1 {
+  -webkit-transform: translatex(-50px);
+          transform: translatex(-50px);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+div.block#block3 .content .socials #socialsItem3 {
+  -webkit-transform: translatex(50px);
+          transform: translatex(50px);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 @media (min-width: 1200px) {
@@ -478,6 +496,15 @@ div.block#block3 .content .socials [id^="socialsItem"]:last-of-type {
   }
   .block#block2 .underlay .col-md-4 {
     padding: 20px 0 !important;
+  }
+  .block#block3 .socials {
+    background: #e6e6e6;
+  }
+  .block#block3 #socialsItem2 {
+    background-color: #FFF;
+  }
+  .block#block3 [id^="socialsItem"] {
+    border: none !important;
   }
 }
 
