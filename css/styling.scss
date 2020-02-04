@@ -65,8 +65,9 @@ div.block#block1 {
     .background {
         width: 100vw;
         height: 50rem;
-        overflow-y: hidden;
         background-color: rgb(240, 240, 240);
+        position: absolute;
+        overflow: hidden;
 
         .rotate {
             transform: rotate(315deg) translateX(1000px);
@@ -88,6 +89,113 @@ div.block#block1 {
             right: -20rem;
         }
     }
+
+    .content {
+        margin: auto;
+
+        .col-md-6 {
+            height: calc(50rem - 120px);
+            margin-top: 250px;
+        }
+
+        #landingInfo {
+            padding-right: 100px;
+
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 60px;
+                letter-spacing: 2px;
+                margin: 0;
+                background: linear-gradient(45deg, rgb(120, 136, 192) 0%, rgb(144, 31, 224) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+                padding-left: 6px;
+                font-size: 13px;
+                margin: 0;
+
+                &#undertitle {
+                    color: rgb(180, 111, 207);
+                    background: linear-gradient(45deg, rgb(120, 136, 192) 0%, rgb(144, 31, 224) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    filter: brightness(0.7);
+                    padding-left: 180px;
+                    position: relative;
+                    top: -15px;
+                }
+
+                &#description {
+                    color: rgb(107, 107, 107);
+                }
+            }
+
+            button {
+                border: none;
+                display: inline-block;
+                border-radius: 99px;
+                color: black;
+                position: relative;
+                z-index: 1;
+                font-size: 14px;
+                padding: 17px 35px;
+                margin-top: 120px;
+                font-weight: 100;
+                text-transform: uppercase;
+                font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+                letter-spacing: 2px;
+                transition: all 0.6s ease;
+
+
+                &::before,
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    border-radius: 99px;
+                }
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -2;
+                    background: #269cc1;
+                    background: -moz-linear-gradient(left, #269cc1 0%, #503b9a 100%);
+                    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #269cc1), color-stop(100%, #503b9a));
+                    background: -webkit-linear-gradient(left, #269cc1 0%, #503b9a 100%);
+                    background: -o-linear-gradient(left, #269cc1 0%, #503b9a 100%);
+                    background: -ms-linear-gradient(left, #269cc1 0%, #503b9a 100%);
+                    background: linear-gradient(to right, #269cc1 0%, #503b9a 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#503b9a', endColorstr='#269cc1', GradientType=1);
+                }
+
+                &::after {
+                    top: 2px;
+                    bottom: 2px;
+                    left: 2px;
+                    right: 2px;
+                    background-color: #F0F0F0;
+                    z-index: -1;
+                    opacity: 1;
+                }
+
+                &:hover:after {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    color: #F0F0F0;
+                }
+            }
+        }
+
+        #landingImage {
+            
+        }
+    }
 }
 
 div.block#block2 {
@@ -98,6 +206,12 @@ div.block#block2 {
         position: absolute;
         top: 50rem;
         height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1300px;
     }
 }
 

@@ -64,8 +64,9 @@ header .links #active {
 div.block#block1 .background {
   width: 100vw;
   height: 50rem;
-  overflow-y: hidden;
   background-color: #f0f0f0;
+  position: absolute;
+  overflow: hidden;
 }
 
 div.block#block1 .background .rotate {
@@ -92,12 +93,117 @@ div.block#block1 .background .rotate2 {
   right: -20rem;
 }
 
+div.block#block1 .content {
+  margin: auto;
+}
+
+div.block#block1 .content .col-md-6 {
+  height: calc(50rem - 120px);
+  margin-top: 250px;
+}
+
+div.block#block1 .content #landingInfo {
+  padding-right: 100px;
+}
+
+div.block#block1 .content #landingInfo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin: 0;
+  background: linear-gradient(45deg, #7888c0 0%, #901fe0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.block#block1 .content #landingInfo p {
+  padding-left: 6px;
+  font-size: 13px;
+  margin: 0;
+}
+
+div.block#block1 .content #landingInfo p#undertitle {
+  color: #b46fcf;
+  background: linear-gradient(45deg, #7888c0 0%, #901fe0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  padding-left: 180px;
+  position: relative;
+  top: -15px;
+}
+
+div.block#block1 .content #landingInfo p#description {
+  color: #6b6b6b;
+}
+
+div.block#block1 .content #landingInfo button {
+  border: none;
+  display: inline-block;
+  border-radius: 99px;
+  color: black;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  padding: 17px 35px;
+  margin-top: 120px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+div.block#block1 .content #landingInfo button::before, div.block#block1 .content #landingInfo button::after {
+  content: ' ';
+  position: absolute;
+  border-radius: 99px;
+}
+
+div.block#block1 .content #landingInfo button::before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background: #269cc1;
+  background: -webkit-gradient(linear, left top, right top, from(#269cc1), to(#503b9a));
+  background: linear-gradient(to right, #269cc1 0%, #503b9a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#503b9a', endColorstr='#269cc1', GradientType=1);
+}
+
+div.block#block1 .content #landingInfo button::after {
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: #F0F0F0;
+  z-index: -1;
+  opacity: 1;
+}
+
+div.block#block1 .content #landingInfo button:hover:after {
+  opacity: 0;
+}
+
+div.block#block1 .content #landingInfo button:hover {
+  color: #F0F0F0;
+}
+
 div.block#block2 .background {
   background: white;
   width: 100vw;
   position: absolute;
   top: 50rem;
   height: 600px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
 }
 
 @media only screen and (max-width: 1090px) {
