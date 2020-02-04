@@ -3,6 +3,80 @@ body {
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e;
+}
+
+button.goto-page {
+  border: none;
+  display: inline-block;
+  border-radius: 99px;
+  color: black;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  padding: 17px 35px;
+  margin-top: 120px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+button.goto-page::before, button.goto-page::after {
+  content: ' ';
+  position: absolute;
+  border-radius: 99px;
+}
+
+button.goto-page::before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background: #269cc1;
+  background: -webkit-gradient(linear, left top, right top, from(#269cc1), to(#503b9a));
+  background: linear-gradient(to right, #269cc1 0%, #503b9a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#503b9a', endColorstr='#269cc1', GradientType=1);
+}
+
+button.goto-page::after {
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: #F0F0F0;
+  z-index: -1;
+  opacity: 1;
+}
+
+button.goto-page:hover:after {
+  opacity: 0;
+}
+
+button.goto-page:hover {
+  color: #F0F0F0;
 }
 
 header {
@@ -61,6 +135,22 @@ header .links #active {
   font-weight: 700;
 }
 
+button.goto-page#top-right-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+  margin-top: 0;
+  font-size: 12px;
+  padding: 10px 0px 10px 0px;
+  opacity: 0;
+  z-index: 9999999;
+}
+
+button.goto-page#top-right-button::after {
+  background-color: #FFF;
+}
+
 div.block#block1 .background {
   width: 100vw;
   height: 50rem;
@@ -98,12 +188,12 @@ div.block#block1 .content {
 }
 
 div.block#block1 .content .col-md-6 {
-  height: calc(50rem - 120px);
-  margin-top: 250px;
+  height: calc(50rem - 250px);
 }
 
 div.block#block1 .content #landingInfo {
   padding-right: 100px;
+  margin-top: 250px;
 }
 
 div.block#block1 .content #landingInfo h1 {
@@ -138,84 +228,53 @@ div.block#block1 .content #landingInfo p#description {
   color: #6b6b6b;
 }
 
-div.block#block1 .content #landingInfo button {
-  border: none;
-  display: inline-block;
-  border-radius: 99px;
-  color: black;
-  position: relative;
-  z-index: 1;
-  font-size: 14px;
-  padding: 17px 35px;
-  margin-top: 120px;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+div.block#block1 .content #landingImage {
+  margin-top: 160px;
+  padding-left: 100px;
 }
 
-div.block#block1 .content #landingInfo button::before, div.block#block1 .content #landingInfo button::after {
-  content: ' ';
-  position: absolute;
-  border-radius: 99px;
+div.block#block1 .content #landingImage img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-div.block#block1 .content #landingInfo button::before {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -2;
-  background: #269cc1;
-  background: -webkit-gradient(linear, left top, right top, from(#269cc1), to(#503b9a));
-  background: linear-gradient(to right, #269cc1 0%, #503b9a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#503b9a', endColorstr='#269cc1', GradientType=1);
+div.block#block1 #small-viewport {
+  display: none;
 }
 
-div.block#block1 .content #landingInfo button::after {
-  top: 2px;
+div.block#block1 button.goto-page::after {
+  top: 1px;
   bottom: 2px;
-  left: 2px;
-  right: 2px;
-  background-color: #F0F0F0;
-  z-index: -1;
-  opacity: 1;
-}
-
-div.block#block1 .content #landingInfo button:hover:after {
-  opacity: 0;
-}
-
-div.block#block1 .content #landingInfo button:hover {
-  color: #F0F0F0;
+  left: 1px;
+  right: 1px;
 }
 
 div.block#block2 .background {
   background: white;
   width: 100vw;
-  position: absolute;
   top: 50rem;
   height: 600px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1300px;
+    min-width: 1300px;
   }
 }
 
-@media only screen and (max-width: 1090px) {
+@media screen and (max-width: 1090px) {
   header {
     padding-right: 140px;
   }
   header .links {
     text-align: right;
   }
+  button#top-right-button {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   header {
     height: 120px;
     display: block;
@@ -236,9 +295,44 @@ div.block#block2 .background {
   header .links {
     text-align: center;
   }
+  #landingInfo {
+    padding-right: 5px !important;
+  }
+  #landingImage {
+    padding-left: 15px !important;
+    padding-top: 50px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
+  #landingImage {
+    padding-left: 15px !important;
+    padding-top: 0px !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #landingImage {
+    padding-left: 15px !important;
+    margin: 0 !important;
+    padding-top: 160px !important;
+  }
+  #large-viewport {
+    display: none !important;
+  }
+  #small-viewport {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .block#block1 {
+    background-color: #dddddd !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .links a {
     padding: 0px 10px !important;
   }
