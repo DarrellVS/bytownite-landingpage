@@ -31,13 +31,14 @@
 
         <div class="links">
             <a href="#" id="active">Home</a>
-            <a href="#" id="">Links</a>
+            <a href="#" id="">Sites</a>
             <a href="#" id="">About</a>
             <a href="#" id="">Contact</a>
         </div>
     </header>
 
-    <button class="goto-page" id="top-right-button"  onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Go to page</button>
+    <button class="goto-page" id="top-right-button"
+        onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Go to page</button>
 
     <div class="block" id="block1">
         <div class="background">
@@ -62,7 +63,8 @@
                     Want to join the fun?
                 </p>
 
-                <button class="goto-page" onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Lets go!</button>
+                <button class="goto-page"
+                    onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Lets go!</button>
             </div>
 
             <div class="col-md-6" id="landingImage">
@@ -91,14 +93,15 @@
                     Want to join the fun?
                 </p>
 
-                <button class="goto-page"  onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Lets go!</button>
+                <button class="goto-page"
+                    onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Lets go!</button>
             </div>
         </div>
     </div>
 
     <div class="block" id="block2">
         <div class="overlay-card container">
-            <div class="col-md-12 row">
+            <div class="col-md-12 overlay row">
                 <div class="col-md-4">
                     <h3><a href="https://www.youtube.com/watch?v=VTlMIrrVu-Q">Community</a></h3>
                 </div>
@@ -110,11 +113,56 @@
                 </div>
             </div>
         </div>
+
+        <div class="underlay-card container">
+            <div class="col-md-12 underlay row">
+                <div class="col-md-4">
+                    <div class="inner">
+                        <h3 id="title">
+                            Chat along
+                        </h3>
+
+                        <p id="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aperiam itaque amet voluptatibus blanditiis odio ab optio laudantium minus incidunt cupiditate, ex soluta illo non, sit est alias libero reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, laboriosam id? Iure dignissimos asperiores fuga quam reprehenderit earum ut at inventore hic aperiam aut praesentium natus alias, consequuntur nobis voluptate?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="inner">
+                        <h3 id="title">
+                            Have Fun
+                        </h3>
+
+                        <p id="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aperiam itaque amet voluptatibus blanditiis odio ab optio laudantium minus incidunt cupiditate, ex soluta illo non, sit est alias libero reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, laboriosam id? Iure dignissimos asperiores fuga quam reprehenderit earum ut at inventore hic aperiam aut praesentium natus alias, consequuntur nobis voluptate?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="inner">
+                        <h3 id="title">
+                            Dikke Dab
+                        </h3>
+
+                        <p id="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aperiam itaque amet voluptatibus blanditiis odio ab optio laudantium minus incidunt cupiditate, ex soluta illo non, sit est alias libero reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, laboriosam id? Iure dignissimos asperiores fuga quam reprehenderit earum ut at inventore hic aperiam aut praesentium natus alias, consequuntur nobis voluptate?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="background">
 
         </div>
     </div>
 
+    <div class="block" id="block3">
+        <div class="background">
+            <div class="rotate2"></div>
+            <div class="rotate"></div>
+        </div>
+    </div>
 
 
     <script>
@@ -128,10 +176,12 @@
 
             if (scrollTop > 0 && document.getElementById("header").style.background == "") {
                 document.getElementById("header").style.background = "#FFF";
+                document.getElementById("header").style.boxShadow = "0px 10px 63px -19px rgba(0, 0, 0, 0.2)";
             }
 
             if (scrollTop == 0 && document.getElementById("header").style.background != "") {
                 document.getElementById("header").style.background = "";
+                document.getElementById("header").style.boxShadow = "";
             }
 
             if (scrollTop < 300) {
