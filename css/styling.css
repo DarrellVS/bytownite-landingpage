@@ -263,7 +263,7 @@ div.block#block2 {
   background: linear-gradient(45deg, rgba(84, 113, 213, 0.25) 0%, rgba(146, 68, 201, 0.25) 100%);
   width: 100vw;
   top: 50rem;
-  height: 600px;
+  height: 100%;
 }
 
 div.block#block2 .container {
