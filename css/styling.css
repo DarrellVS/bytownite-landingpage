@@ -124,6 +124,7 @@ button.goto-page {
   letter-spacing: 2px;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
+  outline: none;
 }
 
 button.goto-page::before, button.goto-page::after {
