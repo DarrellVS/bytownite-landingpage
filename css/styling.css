@@ -873,6 +873,9 @@ button.goto-page:hover {
   .page-404 header, .page-404 #h2 {
     text-align: center;
   }
+  .page-404 header {
+    padding-top: 50px;
+  }
   .page-404 #h2 {
     padding-top: 40px;
   }
