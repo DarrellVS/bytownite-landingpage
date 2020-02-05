@@ -93,10 +93,10 @@ button.goto-page::before {
 }
 
 button.goto-page::after {
-  top: 2px;
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
   background-color: #F8F8FA;
   z-index: -1;
   opacity: 1;
@@ -289,13 +289,6 @@ button.goto-page:hover {
 
 .index div.block#block1 #small-viewport {
   display: none;
-}
-
-.index div.block#block1 button.goto-page::after {
-  top: 1px;
-  bottom: 2px;
-  left: 1px;
-  right: 1px;
 }
 
 .index div.block#block2 {

@@ -94,10 +94,10 @@ button.goto-page {
     }
 
     &::after {
-        top: 2px;
-        bottom: 2px;
-        left: 2px;
-        right: 2px;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
         background-color: #F8F8FA;
         z-index: -1;
         opacity: 1;
@@ -285,15 +285,6 @@ button.goto-page {
 
         #small-viewport {
             display: none;
-        }
-
-        button.goto-page {
-            &::after {
-                top: 1px;
-                bottom: 2px;
-                left: 1px;
-                right: 1px;
-            }
         }
     }
 
