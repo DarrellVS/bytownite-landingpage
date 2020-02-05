@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400&display=swap" rel="stylesheet">
 
     <!-- icons -->
-    <link href="/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -596,7 +596,7 @@
             block5Y = window.scrollY - 600 + document.querySelector('#block5').getBoundingClientRect().top;
 
             document.body.style.clipPath = 'circle(' + (document.body.clientHeight + document.body
-                .clientWidth) + 'px at 100% 0%)';
+                .clientWidth + 500) + 'px at 100% 0%)';
 
             document.getElementById("landingInfo").style.transform = "translateY(0px)";
             document.getElementById("landingImage").style.transform = "translateY(0px)";
