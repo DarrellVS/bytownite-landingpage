@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     background-color: rgb(58, 70, 92);
+    overflow-x: hidden;
 }
 
 body {
@@ -510,7 +511,7 @@ button.goto-page {
                     margin: 10px;
                 }
 
-                #img1 {
+                #img1, #img4 {
                     width: 20rem;
 
                     //Align right
@@ -526,7 +527,7 @@ button.goto-page {
                     }
                 }
 
-                #img2 {
+                #img2, #img5 {
                     width: 20rem;
 
                     transform: translateX(15px);
@@ -538,7 +539,7 @@ button.goto-page {
                     }
                 }
 
-                #img3 {
+                #img3, #img6 {
                     width: 20rem;
                     position: relative;
                     left: calc(100% - 20rem - 110px);
@@ -551,6 +552,8 @@ button.goto-page {
                         max-width: 100%;
                     }
                 }
+
+                
             }
 
             .info-container {
@@ -762,6 +765,14 @@ button.goto-page {
     
                 .img-container {
                     padding-right: 15px !important;
+                }
+
+                #img3, #img6 {
+                    transform: translateX(-25px);
+                }
+
+                #img3, #img6 {
+                    left: 0px !important;
                 }
             }
     

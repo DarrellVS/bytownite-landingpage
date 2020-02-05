@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #3a465c;
+  overflow-x: hidden;
 }
 
 body {
@@ -523,7 +524,7 @@ button.goto-page:hover {
   margin: 10px;
 }
 
-.index div.block#block4 .content .img-container #img1 {
+.index div.block#block4 .content .img-container #img1, .index div.block#block4 .content .img-container #img4 {
   width: 20rem;
   position: relative;
   left: calc(100% - 20rem);
@@ -533,12 +534,12 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img1 img {
+.index div.block#block4 .content .img-container #img1 img, .index div.block#block4 .content .img-container #img4 img {
   max-height: 100%;
   max-width: 100%;
 }
 
-.index div.block#block4 .content .img-container #img2 {
+.index div.block#block4 .content .img-container #img2, .index div.block#block4 .content .img-container #img5 {
   width: 20rem;
   -webkit-transform: translateX(15px);
           transform: translateX(15px);
@@ -546,12 +547,12 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img2 img {
+.index div.block#block4 .content .img-container #img2 img, .index div.block#block4 .content .img-container #img5 img {
   max-height: 100%;
   max-width: 100%;
 }
 
-.index div.block#block4 .content .img-container #img3 {
+.index div.block#block4 .content .img-container #img3, .index div.block#block4 .content .img-container #img6 {
   width: 20rem;
   position: relative;
   left: calc(100% - 20rem - 110px);
@@ -561,7 +562,7 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img3 img {
+.index div.block#block4 .content .img-container #img3 img, .index div.block#block4 .content .img-container #img6 img {
   max-height: 100%;
   max-width: 100%;
 }
@@ -748,6 +749,13 @@ button.goto-page:hover {
   }
   .index .block#block4 .small-viewport .img-container {
     padding-right: 15px !important;
+  }
+  .index .block#block4 .small-viewport #img3, .index .block#block4 .small-viewport #img6 {
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }
+  .index .block#block4 .small-viewport #img3, .index .block#block4 .small-viewport #img6 {
+    left: 0px !important;
   }
   .index .block#block4 .large-viewport {
     display: none !important;

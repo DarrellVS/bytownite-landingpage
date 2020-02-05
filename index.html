@@ -350,13 +350,13 @@
                             </p>
                         </div>
                         <div class="col-md-6 img-container">
-                            <div id="img1">
+                            <div id="img4">
                                 <img src="https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg" alt="">
                             </div>
-                            <div id="img2">
+                            <div id="img5">
                                 <img src="https://www.kiplinger.com/kipimages/pages/18048.jpg" alt="">
                             </div>
-                            <div id="img3">
+                            <div id="img6">
                                 <img src="./images/corndog.png" alt="">
                             </div>
                         </div>
@@ -478,18 +478,25 @@
                 document.getElementById("socialsItem3").style.transform = "";
             }
 
-            if (scrollTop >= 1900 && scrollTop <= 2650 ) {
+            if (scrollTop >= 1900 && scrollTop <= 2650 && window.innerWidth > 616 ) {
                 document.getElementById("img1").style.transform = "translateX(0px)";
                 document.getElementById("img2").style.transform = "translateX(0px)";
                 document.getElementById("img3").style.transform = "translateX(0px)";
+            } else if ( scrollTop >= 4290 && scrollTop <= 5190 && window.innerWidth < 616 ) {
+                console.log(document.getElementById("img1"));
 
+                document.getElementById("img4").style.transform = "translateX(-10px)";
+                document.getElementById("img5").style.transform = "translateX(-15px)";
+                document.getElementById("img6").style.transform = "translateX(8px)";
             } else {
                 document.getElementById("img1").style.transform = "translateX(-15px)";
                 document.getElementById("img2").style.transform = "translateX(15px)";
                 document.getElementById("img3").style.transform = "translateX(-30px)";
+                document.getElementById("img4").style.transform = "translateX(-25px)";
+                document.getElementById("img5").style.transform = "translateX(15px)";
+                document.getElementById("img6").style.transform = "translateX(-30px)";
             }
 
-            // console.log(scrollTop);
 
         }
 
