@@ -42,7 +42,7 @@
         </div>
     </header>
 
-    <button class="goto-page" id="top-right-button" onclick='onClickHandler(0)'>Go to page</button>
+    <button class="goto-page" id="top-right-button" onmousedown='onClickHandler(0)'>Go to page</button>
 
     <div class="blocks">
 
@@ -70,7 +70,7 @@
                         Want to join the fun?
                     </p>
 
-                    <button class="goto-page" onclick='onClickHandler(0)'>Lets
+                    <button class="goto-page" onmousedown='onClickHandler(0)'>Lets
                         go!</button>
                 </div>
 
@@ -101,8 +101,7 @@
                         Want to join the fun?
                     </p>
 
-                    <button class="goto-page"
-                        onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Lets
+                    <button class="goto-page" onmousedown="onClickHandler(0)">Lets
                         go!</button>
                 </div>
             </div>
@@ -112,13 +111,13 @@
             <div class="overlay-card container">
                 <div class="col-md-12 overlay row">
                     <div class="col-md-4">
-                        <h3><a href="https://www.youtube.com/watch?v=VTlMIrrVu-Q">Community</a></h3>
+                        <h3><a>Community</a></h3>
                     </div>
                     <div class="col-md-4">
-                        <h3><a href="https://www.youtube.com/watch?v=VTlMIrrVu-Q">Roleplay</a></h3>
+                        <h3><a>Roleplay</a></h3>
                     </div>
                     <div class="col-md-4">
-                        <h3><a href="https://www.youtube.com/watch?v=VTlMIrrVu-Q">Despacito</a></h3>
+                        <h3><a>Despacito</a></h3>
                     </div>
                 </div>
             </div>
@@ -197,54 +196,51 @@
                 <div class="row socials">
                     <div class="col-md-4" id="socialsItem1">
                         <div id="title">
-                            <i class="fab fa-discord"
-                                onclick='window.location.href = "https://www.youtube.com/watch?v=6LvlG2dTQKg"'></i>
+                            <i class="fab fa-discord" onmousedown='onClickHandler(1)'></i>
 
                             <h3>
-                                <a href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                                <a onmousedown="onClickHandler(1)">
                                     Discord
                                 </a>
                             </h3>
 
                             </br></br></br>
 
-                            <a id="link" href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                            <a id="link" onmousedown="onClickHandler(1)">
                                 www.discord.gg/bytownite
                             </a>
                         </div>
                     </div>
                     <div class="col-md-4" id="socialsItem2">
                         <div id="title">
-                            <i class="fab fa-twitter"
-                                onclick='window.location.href = "https://www.youtube.com/watch?v=6LvlG2dTQKg"'></i>
+                            <i class="fab fa-twitter" onmousedown='onClickHandler(2)'></i>
 
                             <h3>
-                                <a href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                                <a onmousedown="onClickHandler(2)">
                                     Twitter
                                 </a>
                             </h3>
 
                             </br></br></br>
 
-                            <a id="link" href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                            <a id="link" onmousedown="onClickHandler(2)">
                                 www.twitter.com/bytownite
                             </a>
                         </div>
                     </div>
                     <div class="col-md-4" id="socialsItem3">
                         <div id="title">
-                            <i class="fab fa-instagram"
-                                onclick='window.location.href = "https://www.youtube.com/watch?v=6LvlG2dTQKg"'></i>
+                            <i class="fab fa-instagram" onmousedown='onClickHandler(3)'></i>
 
                             <h3>
-                                <a href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                                <a onmousedown="onClickHandler(3)">
                                     Instagram
                                 </a>
                             </h3>
 
                             </br></br></br>
 
-                            <a id="link" href="https://www.youtube.com/watch?v=6LvlG2dTQKg">
+                            <a id="link" onmousedown="onClickHandler(3)">
                                 www.instagram.com/bytownite
                             </a>
                         </div>
@@ -501,16 +497,54 @@
         }
 
         async function onClickHandler(id) {
-            switch (id) {
-                case 0:
-                    document.body.style.clipPath = "circle(0% at 100% 0%)";
+            var e = window.event;
+            var blank;
 
-                    await sleep(800);
-
-                    window.location.href = "https://middleearthchronicles.com/login/";
-                    
+            switch (e.which) {
+                case 1:
+                    //Same tab
+                    blank = 0;
+                    break;
+                case 2:
+                    //Middle click - new tab
+                    blank = 1;
                     break;
             }
+
+            switch (id) {
+                case 0:
+                    //Middle Earth Chronicles
+                    url = "https://middleearthchronicles.com/login/";
+                    break;
+
+                case 1:
+                    //Discord
+                    url = "https://www.Discord.gg/TheMiddleEarthChronicles";
+                    break;
+
+                case 2:
+                    //Twitter
+                    url = "https://twitter.com/TheMiddleEarth3";
+                    break;
+
+                case 3:
+                    //Instagram
+                    url = "https://www.instagram.com/themiddleearthchronicles/";
+                    break;
+            }
+
+            if (blank) {
+                var win = window.open(url, blank);
+                win.focus();
+            } else {
+                document.body.style.clipPath = "circle(0% at 100% 0%)";
+                await sleep(500);
+                window.location.href = url;
+            }
+
+
+
+
         }
 
         function sleep(ms) {
@@ -524,7 +558,8 @@
             block4Y = window.scrollY + document.querySelector('#block4').getBoundingClientRect().top;
             block5Y = window.scrollY - 600 + document.querySelector('#block5').getBoundingClientRect().top;
 
-            document.body.style.clipPath = 'circle(' + (document.body.clientHeight + 600) + 'px at 100% 0%)';
+            document.body.style.clipPath = 'circle(' + (document.body.clientHeight + document.body
+                .clientWidth) + 'px at 100% 0%)';
         });
     </script>
 
