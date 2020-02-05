@@ -413,6 +413,7 @@ div.block#block3 .content .socials div[id^="socialsItem"] #title i {
   background: linear-gradient(50deg, #5c6fb4 0%, #9357be 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 div.block#block3 .content .socials div[id^="socialsItem"] #title h3 {
