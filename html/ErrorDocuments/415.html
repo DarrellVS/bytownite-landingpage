@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>415 - Unsupported Media Type!</title>
+
+    <!-- styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/styling.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body
+    style="background: linear-gradient(45deg, rgba(0, 55, 243, 0.4) 0%, rgba(147, 63, 206, 0.4) 100%); min-height: 100vh;">
+
+    <div class="error-page">
+        <div class="container">
+            <header>
+                <h1 id="h1">
+                    415 - Unsupported Media Type!
+                </h1>
+            </header>
+
+            <div class="content" id="content">
+                <h2 id="h2">
+                    Lets get troubleshooting:
+                </h2>
+
+                <ul>
+                    <li>
+                        <h3>
+                            Get back to YouTube. Nerd.
+                        </h3>
+                    </li>
+
+                    <li>
+                        <h3>
+                            Learn from your mistakes, and:
+                        </h3>
+                    </li>
+                </ul>
+
+                <button class="goto-page" onclick="window.location.href='../../index.html'">Return home</button>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Made by the <a style="color: inherit;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bytownite</a>
+                Crew,
+                with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("content").style.width = document.getElementById("h1").clientWidth + "px";
+        });
+
+        function displayWindowSize() {
+            document.getElementById("content").style.width = document.getElementById("h1").clientWidth + "px";
+        }
+
+        // Attaching the event listener function to window's resize event
+        window.addEventListener('resize', displayWindowSize);
+    </script>
+
+</body>
+
+</html>

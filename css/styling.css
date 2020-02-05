@@ -793,11 +793,11 @@ button.goto-page:hover {
   }
 }
 
-.page-404 {
+.error-page {
   font-family: 'Montserrat', sans-serif;
 }
 
-.page-404 header {
+.error-page header {
   min-height: 15rem;
   display: -ms-grid;
   display: grid;
@@ -810,41 +810,42 @@ button.goto-page:hover {
   color: white;
 }
 
-.page-404 header h1 {
+.error-page header h1 {
   margin: 0;
   font-weight: 100;
   font-size: 5rem;
 }
 
-.page-404 .content {
+.error-page .content {
   margin: auto;
 }
 
-.page-404 .content h2 {
+.error-page .content h2 {
   color: white;
   margin: 0;
   font-weight: 100;
   font-size: 2rem;
 }
 
-.page-404 .content ul {
+.error-page .content ul {
   text-align: justify;
   list-style: none;
   color: white;
   padding-top: 50px;
+  padding-left: 6px;
 }
 
-.page-404 .content ul li {
+.error-page .content ul li {
   position: relative;
   padding: 20px 20px;
 }
 
-.page-404 .content ul li h3 {
+.error-page .content ul li h3 {
   font-weight: 100;
   font-size: 1.5rem;
 }
 
-.page-404 .content ul li:after {
+.error-page .content ul li:after {
   content: "";
   background: #ccc;
   position: absolute;
@@ -854,17 +855,17 @@ button.goto-page:hover {
   width: 1px;
 }
 
-.page-404 .content ul li:nth-child(3):after {
+.error-page .content ul li:nth-child(3):after {
   bottom: 28.5%;
 }
 
-.page-404 .content button {
+.error-page .content button {
   margin-top: 0px;
-  margin-left: 40px;
+  margin-left: 6px;
 }
 
 @media (min-width: 768px) {
-  .page-404 footer {
+  .error-page footer {
     position: absolute;
     bottom: -88px;
     width: 100vw;
@@ -872,22 +873,22 @@ button.goto-page:hover {
 }
 
 @media (max-width: 768px) {
-  .page-404 header, .page-404 #h2 {
+  .error-page header, .error-page #h2 {
     text-align: center;
   }
-  .page-404 header {
+  .error-page header {
     padding-top: 50px;
   }
-  .page-404 #h2 {
+  .error-page #h2 {
     padding-top: 40px;
   }
-  .page-404 button {
+  .error-page button {
     margin-bottom: 50px;
   }
 }
 
 @media (max-width: 500px) {
-  .page-404 .content ul {
+  .error-page .content ul {
     padding-left: 0px;
     text-align: left;
   }
