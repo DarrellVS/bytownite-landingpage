@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 - You're Lost!</title>
+
+    <!-- styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styling.css">
+    <link href="/font-awesome/css/all.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body
+    style="background: linear-gradient(45deg, rgba(0, 55, 243, 0.4) 0%, rgba(147, 63, 206, 0.4) 100%); height: 100vh;">
+
+    <div class="page-404">
+        <div class="container">
+            <header>
+                <h1 id="h1">
+                    404 - You're lost!
+                </h1>
+            </header>
+
+            <div class="content" id="content">
+                <h2 id="h2">
+                    Lets get troubleshooting:
+                </h2>
+
+                <ul>
+                    <li>
+                        <h3>
+                            The link you followed is outdated.
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            The page you thought exists...doesn't.
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            The page you thought exists does in fact exist but you typed the wrong URL. idiot.
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            You typed the wrong URL on purpose.
+                        </h3>
+                    </li>
+
+                    <li>
+                        <h3>
+                            Learn from your mistakes, or:
+                        </h3>
+                    </li>
+                </ul>
+
+                <button class="goto-page" onclick="window.location.href='../index.html'">Return home</button>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Made by the <a style="color: inherit;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bytownite</a>
+                Crew,
+                with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+
+
+
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("content").style.width = document.getElementById("h1").clientWidth + "px";
+            console.log(document.getElementById("h1").clientWidth);
+        });
+    </script>
+
+</body>
+
+</html>
