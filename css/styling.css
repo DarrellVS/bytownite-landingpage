@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   height: 100%;
@@ -79,6 +83,28 @@ header .links a:hover {
 
 header .links #active {
   font-weight: 700;
+}
+
+footer {
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p i {
+  color: #ff5757;
 }
 
 button.goto-page {
@@ -236,6 +262,7 @@ div.block#block1 .content #landingInfo p#undertitle {
 
 div.block#block1 .content #landingInfo p#description {
   color: #6b6b6b;
+  text-align: justify;
 }
 
 div.block#block1 .content #landingImage {
@@ -338,6 +365,7 @@ div.block#block2 .container div.col-md-12.underlay .col-md-4 .inner #description
   margin-top: 20px;
   -webkit-filter: opacity(0.7);
           filter: opacity(0.7);
+  text-align: justify;
 }
 
 div.block#block3 {
@@ -437,6 +465,10 @@ div.block#block4 .content {
   padding-top: 120px;
 }
 
+div.block#block4 .content .small-viewport {
+  display: none;
+}
+
 div.block#block4 .content .img-container {
   padding-right: 100px;
 }
@@ -468,7 +500,7 @@ div.block#block4 .content .img-container #img2 img {
 div.block#block4 .content .img-container #img3 {
   width: 20rem;
   position: relative;
-  left: calc(100% - 20rem - 100px);
+  left: calc(100% - 20rem - 110px);
 }
 
 div.block#block4 .content .img-container #img3 img {
@@ -502,6 +534,76 @@ div.block#block4 .content .info-container p#undertitle {
 
 div.block#block4 .content .info-container p#description {
   color: #6b6b6b;
+  text-align: justify;
+}
+
+div.block#block5 {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  /* Style inputs with type="text", select elements and textareas */
+  /* Style the submit button with a specific background color etc */
+  /* When moving the mouse over the submit button, add a darker green color */
+}
+
+div.block#block5 h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+div.block#block5 p#us {
+  text-align: center;
+  color: #b46fcf;
+  background: linear-gradient(45deg, #587cff 0%, #9500ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.block#block5 p#description {
+  text-align: justify;
+}
+
+div.block#block5 input[type=text],
+div.block#block5 select,
+div.block#block5 textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+div.block#block5 input[type=text],
+div.block#block5 select {
+  -webkit-transition: padding .25s ease;
+  transition: padding .25s ease;
+}
+
+div.block#block5 input[type=text]:focus,
+div.block#block5 select:focus {
+  padding: 20px 12px;
+}
+
+div.block#block5 textarea {
+  min-height: 100px;
+}
+
+div.block#block5 input[type=submit] {
+  background-color: #4c77af;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.block#block5 input[type=submit]:hover {
+  background-color: #456692;
 }
 
 @media (min-width: 1200px) {
@@ -561,19 +663,14 @@ div.block#block4 .content .info-container p#description {
     padding-top: 0px !important;
     margin-top: 0 !important;
   }
-  .block#block2 .col-md-12 {
-    padding: 0px 20px !important;
-  }
-  .block#block2 .overlay .col-md-4 {
-    border-right: none !important;
-    border-bottom: solid 1px #cccccc;
-    margin: 0 !important;
-  }
-  .block#block2 .overlay .col-md-4:last-of-type {
-    border-bottom: none;
+  .block#block2 .overlay-card {
+    display: none;
   }
   .block#block2 .underlay .col-md-4 {
     padding: 20px 0 !important;
+  }
+  .block#block2 .underlay .col-md-4 .inner {
+    top: 0px !important;
   }
   .block#block3 .socials {
     background: #e6e6e6;
@@ -583,6 +680,25 @@ div.block#block4 .content .info-container p#description {
   }
   .block#block3 [id^="socialsItem"] {
     border: none !important;
+  }
+  .block#block4 .small-viewport {
+    display: block !important;
+  }
+  .block#block4 .small-viewport .info-container {
+    padding-left: 15px !important;
+    margin-bottom: 50px;
+  }
+  .block#block4 .small-viewport .img-container {
+    padding-right: 15px !important;
+  }
+  .block#block4 .large-viewport {
+    display: none !important;
+  }
+  .block#block5 .contact {
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #EEE;
   }
 }
 

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -77,6 +81,24 @@ header {
 
         #active {
             font-weight: 700;
+        }
+    }
+}
+
+footer {
+    padding: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+    p {
+        margin: 0;
+
+        i {
+            color: rgb(255, 87, 87);
         }
     }
 }
@@ -233,6 +255,7 @@ div.block#block1 {
 
                 &#description {
                     color: rgb(107, 107, 107);
+                    text-align: justify;
                 }
             }
         }
@@ -335,6 +358,7 @@ div.block#block2 {
                     #description {
                         margin-top: 20px;
                         filter: opacity(0.7);
+                        text-align: justify;
                     }
                 }
 
@@ -438,6 +462,10 @@ div.block#block4 {
         margin: auto;
         padding-top: 120px;
 
+        .small-viewport {
+            display: none;
+        }
+
         .img-container {
             padding-right: 100px;
 
@@ -451,7 +479,7 @@ div.block#block4 {
                 //Align right
                 position: relative;
                 left: calc(100% - 20rem);
-                
+
                 img {
                     max-height: 100%;
                     max-width: 100%;
@@ -460,7 +488,7 @@ div.block#block4 {
 
             #img2 {
                 width: 20rem;
-                
+
                 img {
                     max-height: 100%;
                     max-width: 100%;
@@ -470,8 +498,8 @@ div.block#block4 {
             #img3 {
                 width: 20rem;
                 position: relative;
-                left: calc(100% - 20rem - 100px);
-                
+                left: calc(100% - 20rem - 110px);
+
                 img {
                     max-height: 100%;
                     max-width: 100%;
@@ -506,8 +534,74 @@ div.block#block4 {
 
             p#description {
                 color: #6b6b6b;
+                text-align: justify;
             }
         }
+    }
+}
+
+div.block#block5 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+
+    p#us {
+        text-align: center;
+        color: rgb(180, 111, 207);
+        background: linear-gradient(45deg, rgb(88, 124, 255) 0%, rgb(149, 0, 255) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p#description {
+        text-align: justify;
+    }
+
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        outline: none;
+    }
+
+    input[type=text],
+    select {
+        transition: padding .25s ease;
+        &:focus {
+            padding: 20px 12px;
+        }
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    /* Style the submit button with a specific background color etc */
+    input[type=submit] {
+        background-color: rgb(76, 119, 175);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: rgb(69, 102, 146);
     }
 }
 
@@ -583,22 +677,16 @@ div.block#block4 {
 
 
     .block#block2 {
-        .col-md-12 {
-            padding: 0px 20px !important;
-        }
-
-        .overlay .col-md-4 {
-            border-right: none !important;
-            border-bottom: solid 1px rgb(204, 204, 204);
-            margin: 0 !important;
-
-            &:last-of-type {
-                border-bottom: none;
-            }
+        .overlay-card {
+            display: none;
         }
 
         .underlay .col-md-4 {
             padding: 20px 0 !important;
+
+            .inner {
+                top: 0px !important;
+            }
         }
     }
 
@@ -614,6 +702,32 @@ div.block#block4 {
         [id^="socialsItem"] {
             border: none !important;
         }
+    }
+
+    .block#block4 {
+        .small-viewport {
+            display: block !important;
+
+            .info-container {
+                padding-left: 15px !important;
+                margin-bottom: 50px;
+            }
+
+            .img-container {
+                padding-right: 15px !important;
+            }
+        }
+
+        .large-viewport {
+            display: none !important;
+        }
+    }
+
+    .block#block5 .contact {
+        margin-top: 70px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #EEE;
     }
 }
 
