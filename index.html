@@ -43,7 +43,7 @@
             </div>
         </header>
 
-        <button class="goto-page" id="top-right-button" onmousedown='onClickHandler(0)'>Go to page</button>
+        <button class="goto-page" id="top-right-button" onmousedown='window.location.href = "https://middleearthchronicles.com/login/"'>Go to page</button>
 
         <div class="blocks">
 
@@ -72,7 +72,7 @@
                             Want to join the fun?
                         </p>
 
-                        <button class="goto-page" onmousedown='onClickHandler(0)'>Lets
+                        <button class="goto-page" onmousedown='window.location.href="https://middleearthchronicles.com/login/"'>Lets
                             go!</button>
                     </div>
 
@@ -104,7 +104,7 @@
                             Want to join the fun?
                         </p>
 
-                        <button class="goto-page" onmousedown="onClickHandler(0)">Lets
+                        <button class="goto-page" onmousedown='window.location.href="https://middleearthchronicles.com/login/"'>Lets
                             go!</button>
                     </div>
                 </div>
@@ -208,51 +208,51 @@
                     <div class="row socials">
                         <div class="col-md-4" id="socialsItem1">
                             <div id="title">
-                                <i class="fab fa-discord" onmousedown='onClickHandler(1)'></i>
+                                <i class="fab fa-discord" onmousedown='window.location.href="https://www.Discord.gg/TheMiddleEarthChronicles"'></i>
 
                                 <h3>
-                                    <a onmousedown="onClickHandler(1)">
+                                    <a href="https://www.Discord.gg/TheMiddleEarthChronicles">
                                         Discord
                                     </a>
                                 </h3>
 
                                 </br></br></br>
 
-                                <a id="link" onmousedown="onClickHandler(1)">
+                                <a id="link" href="https://www.Discord.gg/TheMiddleEarthChronicles">
                                     www.discord.gg/bytownite
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4" id="socialsItem2">
                             <div id="title">
-                                <i class="fab fa-twitter" onmousedown='onClickHandler(2)'></i>
+                                <i class="fab fa-twitter" onmousedown='window.location.href="https://twitter.com/TheMiddleEarth3"'></i>
 
                                 <h3>
-                                    <a onmousedown="onClickHandler(2)">
+                                    <a href="https://twitter.com/TheMiddleEarth3">
                                         Twitter
                                     </a>
                                 </h3>
 
                                 </br></br></br>
 
-                                <a id="link" onmousedown="onClickHandler(2)">
+                                <a id="link" href="https://twitter.com/TheMiddleEarth3">
                                     www.twitter.com/bytownite
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4" id="socialsItem3">
                             <div id="title">
-                                <i class="fab fa-instagram" onmousedown='onClickHandler(3)'></i>
+                                <i class="fab fa-instagram" onmousedown='window.location.href="https://www.instagram.com/themiddleearthchronicles/"'></i>
 
                                 <h3>
-                                    <a onmousedown="onClickHandler(3)">
+                                    <a href="https://www.instagram.com/themiddleearthchronicles/">
                                         Instagram
                                     </a>
                                 </h3>
 
                                 </br></br></br>
 
-                                <a id="link" onmousedown="onClickHandler(3)">
+                                <a id="link" href="https://www.instagram.com/themiddleearthchronicles/">
                                     www.instagram.com/bytownite
                                 </a>
                             </div>
@@ -483,8 +483,6 @@
                 document.getElementById("img2").style.transform = "translateX(0px)";
                 document.getElementById("img3").style.transform = "translateX(0px)";
             } else if ( scrollTop >= 4290 && scrollTop <= 5190 && window.innerWidth < 616 ) {
-                console.log(document.getElementById("img1"));
-
                 document.getElementById("img4").style.transform = "translateX(-10px)";
                 document.getElementById("img5").style.transform = "translateX(-15px)";
                 document.getElementById("img6").style.transform = "translateX(8px)";
@@ -540,70 +538,12 @@
             document.getElementById(string2).className = "active";
         }
 
-        async function onClickHandler(id) {
-            var e = window.event;
-            var blank;
-
-            switch (e.which) {
-                case 1:
-                    //Same tab
-                    blank = 0;
-                    break;
-                case 2:
-                    //Middle click - new tab
-                    blank = 1;
-                    break;
-            }
-
-            switch (id) {
-                case 0:
-                    //Middle Earth Chronicles
-                    url = "https://middleearthchronicles.com/login/";
-                    break;
-
-                case 1:
-                    //Discord
-                    url = "https://www.Discord.gg/TheMiddleEarthChronicles";
-                    break;
-
-                case 2:
-                    //Twitter
-                    url = "https://twitter.com/TheMiddleEarth3";
-                    break;
-
-                case 3:
-                    //Instagram
-                    url = "https://www.instagram.com/themiddleearthchronicles/";
-                    break;
-            }
-
-            if (blank) {
-                var win = window.open(url, blank);
-                win.focus();
-            } else {
-                document.body.style.clipPath = "circle(0% at 100% 0%)";
-                await sleep(500);
-                window.location.href = url;
-            }
-
-
-
-
-        }
-
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
         window.addEventListener('DOMContentLoaded', (event) => {
             block1Y = window.scrollY + document.querySelector('#block1').getBoundingClientRect().top;
             block2Y = window.scrollY + document.querySelector('#block2').getBoundingClientRect().top;
             block3Y = window.scrollY + document.querySelector('#block3').getBoundingClientRect().top;
             block4Y = window.scrollY + document.querySelector('#block4').getBoundingClientRect().top;
             block5Y = window.scrollY - 600 + document.querySelector('#block5').getBoundingClientRect().top;
-
-            document.body.style.clipPath = 'circle(' + (document.body.clientHeight + document.body
-                .clientWidth + 500) + 'px at 100% 0%)';
 
             document.getElementById("landingInfo").style.transform = "translateY(0px)";
             document.getElementById("landingImage").style.transform = "translateY(0px)";

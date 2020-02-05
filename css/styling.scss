@@ -10,9 +10,6 @@ body {
     width: 100vw;
     overflow-x: hidden;
 
-    clip-path: none;
-    transition: clip-path 1s ease;
-
     /* width */
     &::-webkit-scrollbar {
         width: 10px;

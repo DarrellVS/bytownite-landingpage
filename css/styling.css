@@ -9,12 +9,6 @@ body {
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
-  -webkit-clip-path: none;
-          clip-path: none;
-  -webkit-transition: -webkit-clip-path 1s ease;
-  transition: -webkit-clip-path 1s ease;
-  transition: clip-path 1s ease;
-  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
   /* width */
   /* Track */
   /* Handle */
