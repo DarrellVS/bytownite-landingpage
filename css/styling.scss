@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    background-color: rgb(58, 70, 92);
 }
 
 body {
@@ -7,6 +8,9 @@ body {
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
+
+    clip-path: none;
+    transition: clip-path 1s ease;
 
     /* width */
     &::-webkit-scrollbar {
@@ -79,7 +83,7 @@ header {
             }
         }
 
-        #active {
+        .active {
             font-weight: 700;
         }
     }
@@ -753,16 +757,18 @@ div.block#block5 {
             padding-bottom: 100px;
         }
     }
+
+    .links a {
+        padding: 0px 10px !important;
+
+        &:hover {
+            padding: 0px 15px !important;
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
     .block#block1 {
         background-color: rgb(224, 224, 224) !important;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .links a {
-        padding: 0px 10px !important;
     }
 }

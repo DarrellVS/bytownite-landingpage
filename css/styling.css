@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background-color: #3a465c;
 }
 
 body {
@@ -7,6 +8,12 @@ body {
   height: 100%;
   width: 100vw;
   overflow-x: hidden;
+  -webkit-clip-path: none;
+          clip-path: none;
+  -webkit-transition: -webkit-clip-path 1s ease;
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
   /* width */
   /* Track */
   /* Handle */
@@ -81,7 +88,7 @@ header .links a:hover {
   padding: 0 40px;
 }
 
-header .links #active {
+header .links .active {
   font-weight: 700;
 }
 
@@ -721,17 +728,17 @@ div.block#block5 input[type=submit]:hover {
     height: 100% !important;
     padding-bottom: 100px;
   }
+  .links a {
+    padding: 0px 10px !important;
+  }
+  .links a:hover {
+    padding: 0px 15px !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .block#block1 {
     background-color: #e0e0e0 !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .links a {
-    padding: 0px 10px !important;
   }
 }
 /*# sourceMappingURL=styling.css.map */
