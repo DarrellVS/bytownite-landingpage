@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bytownite - Index</title>
+    <title>Bytownite - Home</title>
 
     <!-- css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -128,7 +128,7 @@
                 <div class="underlay-card container">
                     <div class="col-md-12 underlay row">
                         <div class="col-md-4">
-                            <div class="inner">
+                            <div class="inner info-card">
                                 <h3 id="title">
                                     Chat along
                                 </h3>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="inner">
+                            <div class="inner info-card">
                                 <h3 id="title">
                                     Have Fun
                                 </h3>
@@ -168,7 +168,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="inner">
+                            <div class="inner info-card">
                                 <h3 id="title">
                                     Dikke Dab
                                 </h3>
@@ -208,17 +208,17 @@
                     <div class="row socials">
                         <div class="col-md-4" id="socialsItem1">
                             <div id="title">
-                                <i class="fab fa-discord" onmousedown='window.location.href="https://www.Discord.gg/TheMiddleEarthChronicles"'></i>
+                                <i class="fab fa-discord" onmousedown='window.location.href="https://discord.gg/PBupFe7"'></i>
 
                                 <h3>
-                                    <a href="https://www.Discord.gg/TheMiddleEarthChronicles">
+                                    <a href="https://discord.gg/PBupFe7">
                                         Discord
                                     </a>
                                 </h3>
 
                                 </br></br></br>
 
-                                <a id="link" href="https://www.Discord.gg/TheMiddleEarthChronicles">
+                                <a id="link" href="https://discord.gg/PBupFe7">
                                     www.discord.gg/bytownite
                                 </a>
                             </div>
@@ -310,6 +310,9 @@
                                 eaque
                                 adipisci quibusdam provident placeat architecto facere!
                             </p>
+
+                            <button class="goto-page" id="learn-more" onclick="window.location.href = '/html/sites.html'">Learn More!</button>
+
                         </div>
                     </div>
 
@@ -348,6 +351,9 @@
                                 eaque
                                 adipisci quibusdam provident placeat architecto facere!
                             </p>
+
+                            <button class="goto-page" id="learn-more" onclick="window.location.href = '/html/sites.html'">Learn More!</button>
+
                         </div>
                         <div class="col-md-6 img-container">
                             <div id="img4">
@@ -434,7 +440,7 @@
 
 
         <footer>
-            <p>Made by the <a style="color: inherit;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bytownite</a>
+            <p id="footer-text">Made by the <a style="color: inherit;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Bytownite</a>
                 Crew,
                 with <i class="fas fa-heart"></i></p>
         </footer>
@@ -453,20 +459,35 @@
             var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document
                 .body).scrollTop
 
+            //Header
             if (scrollTop > 0 && document.getElementById("header").style.background == "") {
                 document.getElementById("header").style.background = "#FFF";
                 document.getElementById("header").style.boxShadow = "0px 10px 63px -19px rgba(0, 0, 0, 0.2)";
             }
-
             if (scrollTop == 0 && document.getElementById("header").style.background != "") {
                 document.getElementById("header").style.background = "";
                 document.getElementById("header").style.boxShadow = "";
             }
-
             if (scrollTop < 300) {
                 document.getElementById("top-right-button").style.opacity = (scrollTop / 300).toString();
             }
 
+            //Block 2
+            if (scrollTop > 352 && scrollTop < 1152 && window.innerWidth > 616) {
+                for (let index = 0; index < 3; index++) {
+                    document.getElementsByClassName("info-card")[index].style.borderRadius = "60px";
+                }
+            } else if (scrollTop > 652 && scrollTop < 2052 && window.innerWidth < 616) {
+                for (let index = 0; index < 3; index++) {
+                    document.getElementsByClassName("info-card")[index].style.borderRadius = "60px";
+                }
+            } else {
+                for (let index = 0; index < 3; index++) {
+                    document.getElementsByClassName("info-card")[index].style.borderRadius = "15px";
+                }
+            }
+
+            //Block 3
             if (scrollTop > 735 && scrollTop < 1608 && window.innerWidth > 616) {
                 document.getElementById("socialsItem1").style.transform = "translatex(0px)";
                 document.getElementById("socialsItem3").style.transform = "translatex(0px)";
@@ -478,6 +499,7 @@
                 document.getElementById("socialsItem3").style.transform = "";
             }
 
+            //Block 4
             if (scrollTop >= 1900 && scrollTop <= 2650 && window.innerWidth > 616 ) {
                 document.getElementById("img1").style.transform = "translateX(0px)";
                 document.getElementById("img2").style.transform = "translateX(0px)";
@@ -495,30 +517,39 @@
                 document.getElementById("img6").style.transform = "translateX(-30px)";
             }
 
+            //Footer
+
+            console.log(document.body.clientHeight - scrollTop);
+            if ( document.body.clientHeight - scrollTop <= 990 ) {
+                document.getElementById("footer-text").style.opacity = "1";
+            } else {
+                document.getElementById("footer-text").style.opacity = "0";
+            }
+
 
         }
 
         function navbarHandler() {
 
+            //Home
             if (window.scrollY >= block1Y && window.scrollY < block2Y) {
                 handleActive(1);
-                console.log("block1");
             }
             if (window.scrollY >= block2Y && window.scrollY < block3Y) {
                 handleActive(1);
-                console.log("block2");
             }
             if (window.scrollY >= block3Y && window.scrollY < block4Y) {
                 handleActive(1);
-                console.log("block3");
             }
+
+            //Sites
             if (window.scrollY >= block4Y && window.scrollY < block5Y) {
                 handleActive(2);
-                console.log("block4");
             }
+
+            //About
             if (window.scrollY >= block5Y && window.scrollY < document.body.clientHeight) {
                 handleActive(3);
-                console.log("block5");
             }
         }
 
@@ -526,15 +557,11 @@
             for (var i = 1; i <= 4; i++) {
                 var string = "header-link-";
                 string += i.toString();
-
-                console.log(string);
                 document.getElementById(string).className = "inactive";
             }
 
             var string2 = "header-link-";
             string2 += pos.toString();
-
-            console.log(string2);
             document.getElementById(string2).className = "active";
         }
 

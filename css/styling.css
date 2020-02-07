@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  background-color: #3a465c;
   overflow-x: hidden;
 }
 
@@ -362,10 +361,14 @@ button.goto-page:hover {
   top: -45px;
   padding: 20px;
   margin: 0;
-  border-radius: 15px;
   font-family: 'Montserrat', sans-serif;
   -webkit-box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border-top-right-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+  -webkit-transition: border-radius .5s ease;
+  transition: border-radius .5s ease;
 }
 
 .index div.block#block2 .container div.col-md-12.underlay .col-md-4 .inner #title {
@@ -513,7 +516,8 @@ button.goto-page:hover {
   margin: 10px;
 }
 
-.index div.block#block4 .content .img-container #img1, .index div.block#block4 .content .img-container #img4 {
+.index div.block#block4 .content .img-container #img1,
+.index div.block#block4 .content .img-container #img4 {
   width: 20rem;
   position: relative;
   left: calc(100% - 20rem);
@@ -523,12 +527,14 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img1 img, .index div.block#block4 .content .img-container #img4 img {
+.index div.block#block4 .content .img-container #img1 img,
+.index div.block#block4 .content .img-container #img4 img {
   max-height: 100%;
   max-width: 100%;
 }
 
-.index div.block#block4 .content .img-container #img2, .index div.block#block4 .content .img-container #img5 {
+.index div.block#block4 .content .img-container #img2,
+.index div.block#block4 .content .img-container #img5 {
   width: 20rem;
   -webkit-transform: translateX(15px);
           transform: translateX(15px);
@@ -536,12 +542,14 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img2 img, .index div.block#block4 .content .img-container #img5 img {
+.index div.block#block4 .content .img-container #img2 img,
+.index div.block#block4 .content .img-container #img5 img {
   max-height: 100%;
   max-width: 100%;
 }
 
-.index div.block#block4 .content .img-container #img3, .index div.block#block4 .content .img-container #img6 {
+.index div.block#block4 .content .img-container #img3,
+.index div.block#block4 .content .img-container #img6 {
   width: 20rem;
   position: relative;
   left: calc(100% - 20rem - 110px);
@@ -551,7 +559,8 @@ button.goto-page:hover {
   transition: all .5s ease;
 }
 
-.index div.block#block4 .content .img-container #img3 img, .index div.block#block4 .content .img-container #img6 img {
+.index div.block#block4 .content .img-container #img3 img,
+.index div.block#block4 .content .img-container #img6 img {
   max-height: 100%;
   max-width: 100%;
 }
@@ -583,6 +592,10 @@ button.goto-page:hover {
 .index div.block#block4 .content .info-container p#description {
   color: #6b6b6b;
   text-align: justify;
+}
+
+.index div.block#block4 .content .info-container button#learn-more::after {
+  background: linear-gradient(50deg, #E9BCC3 0%, #ECBEBC 100%);
 }
 
 .index div.block#block5 {
@@ -652,6 +665,12 @@ button.goto-page:hover {
 
 .index div.block#block5 input[type=submit]:hover {
   background-color: #456692;
+}
+
+.index footer #footer-text {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 @media (min-width: 1200px) {
@@ -739,11 +758,13 @@ button.goto-page:hover {
   .index .block#block4 .small-viewport .img-container {
     padding-right: 15px !important;
   }
-  .index .block#block4 .small-viewport #img3, .index .block#block4 .small-viewport #img6 {
+  .index .block#block4 .small-viewport #img3,
+  .index .block#block4 .small-viewport #img6 {
     -webkit-transform: translateX(-25px);
             transform: translateX(-25px);
   }
-  .index .block#block4 .small-viewport #img3, .index .block#block4 .small-viewport #img6 {
+  .index .block#block4 .small-viewport #img3,
+  .index .block#block4 .small-viewport #img6 {
     left: 0px !important;
   }
   .index .block#block4 .large-viewport {
@@ -784,6 +805,274 @@ button.goto-page:hover {
 
 @media screen and (max-width: 576px) {
   .index .block#block1 {
+    background-color: #e0e0e0 !important;
+  }
+}
+
+.sites {
+  height: 100%;
+  -webkit-box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 63px -19px rgba(0, 0, 0, 0.25);
+}
+
+.sites header {
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  padding: 0;
+  z-index: 9999;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background .5s ease;
+  transition: background .5s ease;
+}
+
+.sites header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #1d1d1d;
+  margin: 0;
+  position: absolute;
+  left: 140px;
+  top: 15px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.sites header h1:hover {
+  letter-spacing: 5px;
+  left: 125px;
+}
+
+.sites header .links {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.sites header .links a {
+  text-decoration: none;
+  color: #333333;
+  padding: 0 20px;
+  -webkit-transition: padding .5s ease;
+  transition: padding .5s ease;
+}
+
+.sites header .links a:hover {
+  color: #5b56a0;
+  padding: 0 40px;
+}
+
+.sites header .links .active {
+  font-weight: 700;
+}
+
+.sites button.goto-page#top-right-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 130px;
+  margin-top: 0;
+  font-size: 12px;
+  padding: 10px 0px 10px 0px;
+  opacity: 0;
+  z-index: 9999999;
+}
+
+.sites button.goto-page#top-right-button::after {
+  background-color: #FFF;
+}
+
+.sites .background {
+  width: 100vw;
+  height: 55rem;
+  background-color: #f0f0f0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.sites .background .rotate {
+  -webkit-transform: rotate(315deg) translateX(1000px);
+          transform: rotate(315deg) translateX(1000px);
+  background: -webkit-gradient(linear, left top, right top, from(#e6e4ee), color-stop(50%, white), to(#e5e4eb));
+  background: linear-gradient(90deg, #e6e4ee 0%, white 50%, #e5e4eb 100%);
+  width: 30rem;
+  height: 150rem;
+  position: absolute;
+  top: 10rem;
+  left: -10rem;
+  -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sites .background .rotate2 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: -webkit-gradient(linear, left top, right top, from(#e6e4ee), color-stop(50%, white), to(#e5e4eb));
+  background: linear-gradient(90deg, #e6e4ee 0%, white 50%, #e5e4eb 100%);
+  width: 30rem;
+  height: 60rem;
+  position: absolute;
+  top: 20rem;
+  right: -20rem;
+  -webkit-box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sites .content {
+  margin: auto;
+}
+
+.sites .content .col-md-6 {
+  height: calc(55rem - 250px);
+}
+
+.sites .content #landingInfo {
+  padding-right: 100px;
+  margin-top: 250px;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.sites .content #landingInfo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  letter-spacing: 2px;
+  margin: 0;
+  background: linear-gradient(45deg, #7888c0 0%, #901fe0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sites .content #landingInfo p {
+  padding-left: 6px;
+  font-size: 15px;
+  margin: 0;
+}
+
+.sites .content #landingInfo p#description {
+  color: #6b6b6b;
+  text-align: justify;
+  margin-top: 10px;
+  padding-right: 24px;
+}
+
+@media screen and (max-width: 991px) {
+  .sites .content #landingInfo p#description {
+    padding-right: 0px;
+  }
+}
+
+.sites .content #landingImage {
+  margin-top: 160px;
+  padding-left: 100px;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.sites .content #landingImage img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sites #small-viewport {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .sites .container {
+    min-width: 1300px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .sites header {
+    padding-right: 140px;
+  }
+  .sites header .links {
+    text-align: right;
+  }
+  .sites button#top-right-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sites header {
+    height: 120px;
+    display: block;
+    padding: 0;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .sites header h1 {
+    position: relative;
+    margin-bottom: 10px;
+    left: 0;
+    top: 0;
+  }
+  .sites header h1:hover {
+    letter-spacing: 5px;
+    left: 2px;
+  }
+  .sites header .links {
+    text-align: center;
+  }
+  .sites #landingInfo {
+    padding-right: 5px !important;
+  }
+  .sites #landingImage {
+    padding-left: 15px !important;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sites .block#block1 .background {
+    height: 45rem !important;
+  }
+  .sites #landingImage {
+    padding-left: 15px !important;
+    padding-top: 0px !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sites #landingImage {
+    padding-left: 15px !important;
+    margin: 0 !important;
+    padding-top: 160px !important;
+  }
+  .sites #large-viewport {
+    display: none !important;
+  }
+  .sites #small-viewport {
+    display: block !important;
+  }
+  .sites #small-viewport #landingInfo {
+    margin-top: 120px !important;
+    height: 100% !important;
+    padding-bottom: 100px;
+  }
+  .sites .links a {
+    padding: 0px 10px !important;
+  }
+  .sites .links a:hover {
+    padding: 0px 15px !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sites .block#block1 {
     background-color: #e0e0e0 !important;
   }
 }
@@ -868,7 +1157,8 @@ button.goto-page:hover {
 }
 
 @media (max-width: 768px) {
-  .error-page header, .error-page #h2 {
+  .error-page header,
+  .error-page #h2 {
     text-align: center;
   }
   .error-page header {

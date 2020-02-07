@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bytownite - Sites</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/styling.css">
+
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="sites">
+        <header id="header">
+            <h1 onclick="location.href='../../../../../../../../../../../../../../';">
+                Bytownite
+            </h1>
+
+            <div class="links">
+                <a href="../../../index.html" id="header-link-1">Home</a>
+                <a href="#block4" id="header-link-2" class="active">Sites</a>
+                <a href="../../index.html" id="header-link-3">About</a>
+                <a href="../../index.html" id="header-link-4">Contact</a>
+            </div>
+        </header>
+
+        <button class="goto-page" id="top-right-button" onmousedown='window.location.href = "https://middleearthchronicles.com/login/"'>Go to page</button>
+
+        <div class="block" id="block1">
+            <div class="background">
+                <div class="rotate2"></div>
+                <div class="rotate"></div>
+            </div>
+
+            <div class="content container row" id="large-viewport">
+                <div class="col-md-6" id="landingInfo">
+                    <h1>
+                        Our Webpages
+                    </h1>
+
+                    <p id="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto, dignissimos officia
+                        distinctio ratione accusantium eos expedita nesciunt ipsa ab accusamus est, quidem
+                        laboriosam,
+                        aut
+                        dicta molestias corrupti aspernatur voluptatum.
+                        </br></br></br>
+                        Go to our newest webpage!
+                    </p>
+
+                    <button class="goto-page"
+                        onmousedown='window.location.href="https://middleearthchronicles.com/login/"'>Lets
+                        go!</button>
+                </div>
+
+                <div class="col-md-6" id="landingImage">
+                    <img src="../../images/main-page.png" alt="Logo">
+                </div>
+            </div>
+
+            <div class="content container row" id="small-viewport">
+                <div class="col-md-6" id="landingImage">
+                    <img src="../../images/main-page.png" alt="Logo">
+                </div>
+
+                <div class="col-md-6" id="landingInfo">
+                    <h1>
+                        Our Webpages
+                    </h1>
+
+                    <p id="description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto, dignissimos officia
+                        distinctio ratione accusantium eos expedita nesciunt ipsa ab accusamus est, quidem
+                        laboriosam,
+                        aut
+                        dicta molestias corrupti aspernatur voluptatum.
+                        </br></br></br>
+                        Go to our newest webpage!
+                    </p>
+
+                    <button class="goto-page"
+                        onmousedown='window.location.href="https://middleearthchronicles.com/login/"'>Lets
+                        go!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            aminationHandler();
+            navbarHandler();
+        }, false)
+
+        function aminationHandler() {
+            var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document
+                .body).scrollTop
+
+            //Header
+            if (scrollTop > 0 && document.getElementById("header").style.background == "") {
+                document.getElementById("header").style.background = "#FFF";
+                document.getElementById("header").style.boxShadow = "0px 10px 63px -19px rgba(0, 0, 0, 0.2)";
+            }
+            if (scrollTop == 0 && document.getElementById("header").style.background != "") {
+                document.getElementById("header").style.background = "";
+                document.getElementById("header").style.boxShadow = "";
+            }
+            if (scrollTop < 300) {
+                document.getElementById("top-right-button").style.opacity = (scrollTop / 300).toString();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
